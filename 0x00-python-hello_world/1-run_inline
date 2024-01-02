@@ -1,2 +1,2 @@
 #!/bin/bash
-print("it is a code")
+python3 -c $PYCODE
