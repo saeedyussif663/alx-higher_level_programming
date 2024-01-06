@@ -7,6 +7,6 @@ def no_c(my_string):
         if my_string[char] != "c" and my_string[char] != "C":
             new_string.append(my_string[char])
         else:
-          continue
+            continue
     new_string = "".join(new_string)
     return new_string
