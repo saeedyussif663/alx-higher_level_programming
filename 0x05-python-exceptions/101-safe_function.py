@@ -2,8 +2,7 @@
 
 def safe_function(fct, *args):
     try:
-        result = fct(args[0], args[1])
+        result = fct(*args)
         return result
-    except (ZeroDivisionError, IndexError)as e:
-        print("Exception:",e)
-        return None
+    except Exception as e:
+        print("Exception: {}".format(e), file=sys.stderr)
