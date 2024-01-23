@@ -1,4 +1,4 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 """
 Module: 1
 Private instance attribute: size

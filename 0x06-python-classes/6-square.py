@@ -1,4 +1,25 @@
 #!/usr/bin/python3
+"""
+Module: 6-square
+
+Class Square that defines a square by:
+- Private instance attribute: size
+- Instantiation with optional size: def __init__(self, size=0)
+- Size must be an integer, otherwise raise a TypeError
+  exception with the message size must be an integer
+- If size is less than 0, raise a ValueError exception with
+  the message size must be >= 0
+- Private instance attribute: position
+- Property setter: def position(self, value)
+- Property getter: def position(self)
+- Position must be a tuple of 2 positive integers otherwise raise a TypeError
+- Public instance method: def area(self) that returns the current square area
+- Public instance method: def my_print(self) that prints in stdout the square
+  with the character '#'
+- Setter method: def size(self, value)
+- Getter method: def size(self)
+"""
+
 class Square:
     """defines a square based on 5-square.py"""
     def __init__(self, size=0, position=(0, 0)):
