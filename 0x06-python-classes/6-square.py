@@ -15,16 +15,16 @@ class Square:
     @property
     def size(self):
         """getter for the size attribute
-        
-        Returns: 
-            int: the size of the square
+
+        Returns:
+        int: the size of the square
         """
         return self.__size
-    
+
     @property
     def position(self):
         """getter for the position attribute
-        
+
         Returns:
             tuple:the position of the square
         """
@@ -33,7 +33,7 @@ class Square:
     @size.setter
     def size(self, value):
         """setter function: sets the size to the value attribute
-        
+
         Args:
             value(int): The value for a side of the square
         """
@@ -47,7 +47,7 @@ class Square:
     @position.setter
     def position(self, value):
         """setter function: sets the size to the position attribute
-        
+
         Args:
             value(tuple): The position of the square
         """
@@ -68,7 +68,7 @@ class Square:
 
     def area(self):
         """public instance method that rcalculates the area of the square
-        
+
         Returns:
             int: The area of the square
         """
