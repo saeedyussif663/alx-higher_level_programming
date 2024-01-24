@@ -33,10 +33,10 @@ class Square:
         """
         try:
             if isinstance(position[0], str) or isinstance(position[1], str):
-                raise TypeError("position must be a \
+                raise TypeError("position must be a\
                         tuple of 2 positive integers")
             if position[0] < 0 or position[1] < 0:
-                raise TypeError("position must be a \
+                raise TypeError("position must be a\
                         tuple of 2 positive integers")
             else:
                 self.__size = size
