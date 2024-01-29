@@ -1,6 +1,13 @@
+#!/usr/bin/python3
+"""Rectangle class
+Private instance attribute: width and height
+Instantiation with height and width
+public method: area (returns the area of the rectangle)
+     parameter (returns the parameter of the rectangle)
+"""
 
 class Rectangle:
-
+    """Defines a rectangle based on 1-rectangle.py"""
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
