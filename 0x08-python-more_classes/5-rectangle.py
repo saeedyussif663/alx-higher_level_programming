@@ -11,8 +11,8 @@ Print the message Bye rectangle... if an instance is deleted
 
 
 class Rectangle:
+    """ defines a rectangle based on 4-rectangle.py"""
     def __init__(self, width=0, height=0):
-        """ defines a rectangle based on 4-rectangle.py"""
         self.__width = width
         self.__height = height
 
