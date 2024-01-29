@@ -4,14 +4,20 @@ Instantiation with height and width
 public method: area (returns the area of the rectangle)
      parameter (returns the parameter of the rectangle)
 __str__: prints the character #
+__repr__:  return a string representation of the rectangle to be \
+able to recreate a new instance by using eval()
+Print the message Bye rectangle... if an instance is deleted
 """
 
 
 class Rectangle:
-    """Defines a rectangle based on 2-rectangle.py"""
     def __init__(self, width=0, height=0):
+        """ defines a rectangle based on 4-rectangle.py"""
         self.__width = width
         self.__height = height
+
+    def __del__(self):
+        print("Bye rectangle...")
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
@@ -22,6 +28,9 @@ class Rectangle:
                 return char
             else:
                 print(char)
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}{(self.__width, self.__height)}"
 
     @property
     def width(self):
