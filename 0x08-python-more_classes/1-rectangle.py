@@ -5,11 +5,10 @@ Private instance attribute: width and height
 Instantiation with height and width
 """
 
+
 class Rectangle:
     """Defines a rectangle based on 0-rectangle.py"""
     def __init__(self, width=0, height=0):
-        if type(width) is not int or type(height) is not int:
-            raise TypeError("width must be an integer")
         self.__height = height
         self.__width = width
 

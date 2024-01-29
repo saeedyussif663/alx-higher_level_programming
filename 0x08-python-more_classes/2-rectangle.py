@@ -6,6 +6,7 @@ public method: area (returns the area of the rectangle)
      parameter (returns the parameter of the rectangle)
 """
 
+
 class Rectangle:
     """Defines a rectangle based on 1-rectangle.py"""
     def __init__(self, width=0, height=0):
