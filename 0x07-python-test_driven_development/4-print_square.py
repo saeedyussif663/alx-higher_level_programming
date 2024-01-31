@@ -10,6 +10,8 @@ def print_square(size):
     Args: size(int) lenght of square
     Return: A square with the character #
     """
+    if type(size) is float and size < 0:
+        raise TypeError("size must be an integer")
     if type(size) is not int:
         raise TypeError("size must be an integer")
     if size < 0:

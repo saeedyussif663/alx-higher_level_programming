@@ -1,0 +1,70 @@
+``tests for print square``
+==================================
+
+``import module``
+>>> print_square = __import__('4-print_square').print_square
+
+
+``check with positive integer``
+>>> print_square(8)
+########
+########
+########
+########
+########
+########
+########
+########
+
+``check with zero``
+>>> print_square(0)
+
+``check with 1``
+>>> print_square(1)
+#
+
+``check with less than 0``
+>>> print_square(-2)
+Traceback (most recent call last):   
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\4-print_square.py", line 16, in print_square    
+    raise ValueError("size must be >= 0")
+ValueError: size must be >= 0
+
+
+``check with a float less than zero``
+>>> print_square(-1.2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\4-print_square.py", line 14, in print_square    
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+``check with a float greater than 0``
+>>> print_square(1.2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\4-print_square.py", line 14, in print_square    
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+
+``check with a string``
+>>> print_square("hello")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\4-print_square.py", line 14, in print_square    
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+``check with two arguments``
+>>> print_square(1, 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+``check with no arguments``
+>>> print_square()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_square() missing 1 required positional argument: 'size'
