@@ -19,8 +19,8 @@ of integers/floats")
         raise TypeError("matrix must be a matrix (list of lists)\
 of integers/floats")
     if type(matrix[0]) is not list or type(matrix[1]) is not list:
-        raise TypeError("matrix must be a matrix (list of lists) \
-of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists)of integers/\
+floats")
     if len(matrix[0]) != len(matrix[1]):
         raise TypeError("Each row of the matrix must have the same size")
     if type(div) is not int and type(div) is not float:

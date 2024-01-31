@@ -1,0 +1,58 @@
+The ``matrix divided`` module
+======================
+
+Using ``matrix divided``
+-------------------
+
+    ``importing the function``
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+    ``Checking if first line of script is #!/usr/bin/python``
+    >>> infile = open("2-matrix_divided.py", "r")
+    >>> print(infile.readline().strip('\n'))
+    #!/usr/bin/python3
+
+    ``Regular test``
+    >>> matrix = [        
+    ... [10, 62, 53],
+    ... [14, 15, 16,]
+    ... ]
+    >>> matrix_divided(matrix, 7)
+    [[1.43, 8.86, 7.57], [2.0, 2.14, 2.29]]
+
+    ``making the div a string``
+    >>> matrix = [        
+    ... [10, 62, 53],
+    ... [14, 15, 16,]
+    ... ]
+    >>> matrix_divided(matrix, "7")
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+        File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\2-matrix_divided.py", line 27, in matrix_divided
+            raise TypeError("div must be a number")
+    TypeError: div must be a number
+
+    ``Zero division error``
+    >>> matrix = [        
+    ... [10, 62, 53],
+    ... [14, 15, 16,]
+    ... ]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+        File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\2-matrix_divided.py", line 29, in matrix_divided
+            raise ZeroDivisionError("division by zero")
+    ZeroDivisionError: division by zero
+
+    ``not a rectangle``
+    >>> matrix = [
+    ... [2, 3, 4, 3],
+    ... [3, 4, 5]
+    ... ]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+        File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\2-matrix_divided.py", line 25, in matrix_divided
+            raise TypeError("Each row of the matrix must have the same size")
+    TypeError: Each row of the matrix must have the same size
