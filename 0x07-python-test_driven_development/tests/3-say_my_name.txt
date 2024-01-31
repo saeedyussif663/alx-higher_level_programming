@@ -1,0 +1,38 @@
+``Test for say_my_name function``
+
+=======================================================
+
+``import the function``
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+``check with both first_name and last_name`
+>>> say_my_name("Saeed", "Yussif")
+My name is Saeed Yussif
+
+``check with first_name only``
+>>> say_my_name("saeed")    
+My name is saeed
+
+``check with no argument``
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+``check with first_name as an integer``
+>>> say_my_name(2)       
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+``check with first_name as a string, last_name as an integer`
+>>> say_my_name("saeed", 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\USER\Desktop\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 16, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
