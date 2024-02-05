@@ -1,0 +1,63 @@
+``test for my_list.txt``
+==================================
+
+``importing the class``
+>>> MyList = __import__('1-my_list').MyList
+
+``initializing a obj``
+>>> my_list = MyList()
+
+``check with positive values only``
+>>> my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(3)
+>>> print(my_list)
+[1, 5, 3]
+>>> my_list.print_sorted()
+[1, 3, 5]
+>>> print(my_list)
+[1, 5, 3]
+
+``check with negative values only```
+>>> my_list1 = MyList()
+>>> my_list1.append(-1)
+>>> my_list1.append(-15)
+>>> my_list1.append(-23)
+>>> print(my_list1)
+[-1, -15, -23]
+>>> my_list1.print_sorted()
+[-23, -15, -1]
+>>> print(my_list1)
+[-1, -15, -23]
+
+``check with both negative and positive values```
+>>> my_list2 = MyList()
+>>> my_list2.append(-1)
+>>> my_list2.append(25)
+>>> my_list2.append(15)
+>>> my_list2.append(-23)
+>>> print(my_list2)
+[-1, 25, 15, -23]
+>>> my_list2.print_sorted()
+[-23, -1, 15, 25]
+>>> print(my_list2)
+[-1, 25, 15, -23]
+
+``check with empty object``
+>>> my_list3 = MyList()
+>>> print(my_list3)
+[]
+>>> my_list3.print_sorted()
+[]
+>>> print(my_list3)
+[]
+
+``check with one value in the object``
+>>> my_list4 = MyList()
+>>> my_list4.append(-1)
+>>> print(my_list4)
+[-1]
+>>> my_list4.print_sorted()
+[-1]
+>>> print(my_list4)
+[-1]
