@@ -5,6 +5,7 @@ line containing a specific string
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """appends new_string after search_string has been encountered"""
     with open(filename, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
