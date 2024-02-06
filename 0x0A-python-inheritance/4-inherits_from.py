@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" The module contains inherits_from func
+""" The module contains inherits func
 the function  returns True if the object is an instance of a class \
 that inherited (directly or indirectly) \
 from the specified class ; otherwise False.
