@@ -13,6 +13,7 @@ class Rectangle(Base):
     __y -> y
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        "init function"
         super().__init__(id)
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -33,10 +34,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        "width getter"
         return self.__width
 
     @width.setter
     def width(self, value):
+        "width setter"
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -45,10 +48,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        "height getter" 
         return self.__height
 
     @height.setter
     def height(self, value):
+        "height setter"
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -57,10 +62,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        "x getter"
         return self.__x
 
     @x.setter
     def x(self, value):
+        "x setter"
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -69,10 +76,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        "y getter"
         return self.__y
 
     @y.setter
     def y(self, value):
+        "y setter"
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -80,9 +89,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        "area method"
         return self.__width * self.__height
 
     def display(self):
+        "display method"
         if self.__y > 0:
             for _ in range(self.__y):
                 print(" ")
@@ -94,6 +105,7 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def update(self, *args, **kwargs):
+        "update method"
         if len(args) > 0:
             if len(args) == 1:
                 self.id = args[0]
@@ -128,6 +140,7 @@ class Rectangle(Base):
                 self.__y = kwargs['y']
 
     def to_dictionary(self):
+        "to dict method"
         dict = {
             'x': self.__x,
             'y': self.__y,
@@ -138,5 +151,6 @@ class Rectangle(Base):
         return dict
 
     def __str__(self):
+        "str method"
         return f"[{self.__class__.__name__}] ({self.id}) \
 {self.__x}/{self.__y} - {self.__width}/{self.__height}"
