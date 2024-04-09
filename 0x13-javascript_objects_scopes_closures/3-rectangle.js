@@ -6,11 +6,8 @@ const Rectangle = class {
       this.width = w;
       this.height = h;
       this.print = function () {
-        const i = 0;
-        let j = h;
-        while (i < j) {
+        for (let index = 0; index < h; index++) {
           console.log('X'.repeat(w));
-          j--;
         }
       };
     }
